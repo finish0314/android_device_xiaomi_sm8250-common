@@ -31,13 +31,6 @@ ro.vendor.oem.meid                              u:object_r:vendor_deviceid_prop:
 ro.vendor.oem.sno                               u:object_r:vendor_sno_prop:s0
 ro.vendor.oem.psno                              u:object_r:vendor_sno_prop:s0
 
-# Power
-vendor.powerhal.state                           u:object_r:vendor_power_prop:s0
-vendor.powerhal.audio                           u:object_r:vendor_power_prop:s0
-vendor.powerhal.lpm                             u:object_r:vendor_power_prop:s0
-vendor.powerhal.init                            u:object_r:vendor_power_prop:s0
-vendor.powerhal.rendering                       u:object_r:vendor_power_prop:s0
-
 # Radio
 persist.vendor.radio.RATE_ADAPT_ENABLE          u:object_r:vendor_radio_prop:s0
 persist.vendor.radio.ROTATION_ENABLE            u:object_r:vendor_radio_prop:s0
