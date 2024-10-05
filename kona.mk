@@ -242,6 +242,20 @@ PRODUCT_PACKAGES += \
     media_codecs_performance_c2.xml \
     video_system_specs.json
 
+# MIUI Camera
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/default-permissions/miuicamera-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/miuicamera-permissions.xml
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sysconfig/miuicamera-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/miuicamera-hiddenapi-package-whitelist.xml
+
+PRODUCT_PACKAGES += \
+    MiuiCamera
+
+# Native Public Libraries
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/libraries/public.libraries-xiaomi.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-xiaomi.txt \
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp \
@@ -277,6 +291,10 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay/packages/apps/Car
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-miui.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-miui.xml
 
 # Power
 PRODUCT_PACKAGES += \
